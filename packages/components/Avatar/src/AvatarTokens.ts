@@ -17,6 +17,9 @@ export const defaultAvatarTokens: TokenSettings<AvatarTokens, Theme> = (t: Theme
     ringColor: t.colors.transparentStroke,
     borderColor: t.colors.neutralStroke1,
     borderWidth: t.host.appearance === 'highContrast' ? 1 : 0,
+    imageRing: {
+      ringColor: 'transparent',
+    },
     circular: {
       borderRadius: globalTokens.corner.radius.circle,
     },

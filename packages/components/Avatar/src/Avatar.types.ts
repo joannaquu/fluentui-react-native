@@ -210,6 +210,7 @@ export interface AvatarTokens extends IBackgroundColorTokens, IForegroundColorTo
   circular?: AvatarTokens;
   square?: AvatarTokens;
 
+  imageRing?: AvatarTokens;
   /**
    * Token for inactive value of `active` prop
    */

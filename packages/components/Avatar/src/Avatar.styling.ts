@@ -22,6 +22,7 @@ export const avatarStates: (keyof AvatarTokens)[] = [
   'brand',
   'circular',
   'square',
+  'imageRing',
   'inactive',
   'iconColor',
   'iconSize',

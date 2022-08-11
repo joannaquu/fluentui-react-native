@@ -27,7 +27,8 @@ export const avatarLookup = (layer: string, state: AvatarState, userProps: Avata
     (!userProps['shape'] && layer === 'circular') ||
     layer === userProps['avatarColor'] ||
     layer === avatarSize ||
-    (userProps.active === 'inactive' && layer === 'inactive')
+    (userProps.active === 'inactive' && layer === 'inactive') ||
+    (layer === 'imageRing' && userProps.customBorderImageSource)
   );
 };
 
@@ -53,12 +54,18 @@ export const Avatar = compose<AvatarType>({
       const { showRing, transparentRing, showBadge } = avatar.state;
       const { badge, customBorderImageSource, ...mergedProps } = avatar.props;
       const svgIconsEnabled = ['ios', 'macos', 'win32', 'android'].includes(Platform.OS as string);
-      const RingComponent = showRing && !transparentRing ? (customBorderImageSource ? Slots.imageRing : Slots.ring) : Fragment;
+      const RingComponent = showRing && !transparentRing ? Slots.ring : Fragment;
       const ringProps = createRingComponentProps(userProps);
 
       return (
         <Slots.root {...mergedProps}>
-          <RingComponent {...ringProps}>{renderAvatar(final, avatar.props, Slots, svgIconsEnabled)}</RingComponent>
+          {customBorderImageSource ? (
+            <Slots.imageRing source={customBorderImageSource}>
+              <RingComponent {...ringProps}>{renderAvatar(final, avatar.props, Slots, svgIconsEnabled)}</RingComponent>
+            </Slots.imageRing>
+          ) : (
+            <RingComponent {...ringProps}>{renderAvatar(final, avatar.props, Slots, svgIconsEnabled)}</RingComponent>
+          )}
           {svgIconsEnabled && showBadge && <Slots.badge {...badge} />}
         </Slots.root>
       );
