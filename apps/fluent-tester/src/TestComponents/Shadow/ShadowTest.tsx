@@ -20,5 +20,5 @@ const shadowSections: TestSection[] = [
 export const ShadowTest: React.FunctionComponent = () => {
   const description = 'A Shadow component using the Fluent Design System. Shadow components can be added to other components.';
 
-  return <Test name="Shadow Test" description={description} sections={shadowSections} />;
+  return <Test name="Shadow" description={description} sections={shadowSections} />;
 };

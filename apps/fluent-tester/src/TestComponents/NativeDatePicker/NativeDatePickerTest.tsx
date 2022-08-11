@@ -237,5 +237,5 @@ const nativeDatePickerSections: TestSection[] = [
 export const NativeDatePickerTest: React.FunctionComponent = () => {
   const description = 'A Native date picker component using the Fluent Design System.  Currently only implemented on iOS.';
 
-  return <Test name="Native Date Picker Test" description={description} sections={nativeDatePickerSections} />;
+  return <Test name="Date Picker (Native)" description={description} sections={nativeDatePickerSections} />;
 };

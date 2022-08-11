@@ -275,5 +275,5 @@ export const MenuTest: React.FunctionComponent = () => {
   const description =
     'A Menu is an component that displays a list of options on a temporary surface. They are invoked when users interact with a button, action, or other control.';
 
-  return <Test name="Menu Test" description={description} sections={menuSections} />;
+  return <Test name="Menu" description={description} sections={menuSections} />;
 };

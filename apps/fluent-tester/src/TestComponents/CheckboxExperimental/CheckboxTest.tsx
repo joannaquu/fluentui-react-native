@@ -172,5 +172,5 @@ export const ExperimentalCheckboxTest: React.FunctionComponent = () => {
   const description =
     'Checkboxes give people a way to select one or more items from a group, or switch between two mutually exclusive options (checked or unchecked, on or off).';
 
-  return <Test name="Experimental Checkbox Test" description={description} sections={checkboxSections} />;
+  return <Test name="Checkbox (Experimental)" description={description} sections={checkboxSections} />;
 };

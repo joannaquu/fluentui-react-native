@@ -118,5 +118,5 @@ const toggleSections: TestSection[] = [
 export const SwitchTest: React.FunctionComponent = () => {
   const description = 'Switch is a control that has two mutually exclusive states.';
 
-  return <Test name="Switch Test" description={description} sections={toggleSections} />;
+  return <Test name="Switch" description={description} sections={toggleSections} />;
 };

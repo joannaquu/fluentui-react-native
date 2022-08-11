@@ -67,5 +67,5 @@ const radioGroupSections: TestSection[] = [
 export const RadioGroupTest: React.FunctionComponent = () => {
   const description = 'No description.';
 
-  return <Test name="RadioGroup Test" description={description} sections={radioGroupSections} />;
+  return <Test name="RadioGroup" description={description} sections={radioGroupSections} />;
 };

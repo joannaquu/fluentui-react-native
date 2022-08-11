@@ -103,5 +103,5 @@ const themeSections: TestSection[] = [
 export const TokenTest: React.FunctionComponent = () => {
   const description = 'Alias tokens given from token pipeline. Currently values are pulled from web. Will be used to style components.';
 
-  return <Test name="Token Test" description={description} sections={themeSections} />;
+  return <Test name="Token" description={description} sections={themeSections} />;
 };

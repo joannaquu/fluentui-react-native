@@ -117,5 +117,5 @@ export const ExpanderTest: React.FunctionComponent = () => {
   const description =
     'Expander is a content control that displays components in the header and content. The control has an expanded and collapsed size. Expander is a native control implemented with WinUI 2.6 Expander.';
 
-  return <Test name="Expander Test" description={description} sections={expanderSections} />;
+  return <Test name="Expander" description={description} sections={expanderSections} />;
 };

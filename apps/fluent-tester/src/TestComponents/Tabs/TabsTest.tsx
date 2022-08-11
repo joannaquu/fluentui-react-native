@@ -287,5 +287,5 @@ if (Platform.OS !== 'windows') {
 export const TabsTest: React.FunctionComponent = () => {
   const description = 'With Tabs, users can navigate to another view.';
 
-  return <Test name="Tabs Test" description={description} sections={tabsSections} />;
+  return <Test name="Tabs" description={description} sections={tabsSections} />;
 };

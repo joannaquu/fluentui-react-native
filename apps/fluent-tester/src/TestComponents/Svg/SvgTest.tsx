@@ -193,5 +193,5 @@ const svgSections: TestSection[] = [
 export const SvgTest: React.FunctionComponent = () => {
   const description = 'No description.';
 
-  return <Test name="Svg Test" description={description} sections={svgSections} />;
+  return <Test name="Svg" description={description} sections={svgSections} />;
 };

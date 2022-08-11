@@ -20,5 +20,5 @@ export const PersonaTest: React.FunctionComponent = () => {
   const description =
     "Personas are used for rendering an individual's avatar and presence. Persona renders a PersonaCoin along with descriptive text components.";
 
-  return <Test name="Persona Test" description={description} sections={personaSections} />;
+  return <Test name="Persona" description={description} sections={personaSections} />;
 };

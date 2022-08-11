@@ -30,5 +30,5 @@ export const ExperimentalMenuButtonTest: React.FunctionComponent = () => {
   const description =
     'MenuButton is a component which contains ContextualMenu and Button components. This control combines and simplifies the API for customers.\nClicking on MenuButton opens ContextualMenu. It can have Submenu. But selection checks and a beak are not implemented.';
 
-  return <Test name="Experimental MenuButton Test" description={description} sections={menuButtonSections} />;
+  return <Test name="MenuButton (Experimental)" description={description} sections={menuButtonSections} />;
 };

@@ -14,5 +14,5 @@ const componentNameSections: TestSection[] = [
 export const ComponentNameTest: React.FunctionComponent = () => {
   const description = 'component-description';
 
-  return <Test name="ComponentName Test" description={description} sections={componentNameSections} />;
+  return <Test name="ComponentName" description={description} sections={componentNameSections} />;
 };

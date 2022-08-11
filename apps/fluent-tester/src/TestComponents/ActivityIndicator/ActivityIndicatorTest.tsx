@@ -88,5 +88,5 @@ export const ActivityIndicatorTest: React.FunctionComponent = () => {
   const description =
     'ActivityIndicator is a visual representation that data is being loaded. It is implemented with a View wrapping an Animated SVG. The View is to ensure that AccessibilityRole works. AccessibilityRole currently does not work on SVGs.';
 
-  return <Test name="ActivityIndicator Test" description={description} sections={activityIndicatorSections} />;
+  return <Test name="ActivityIndicator" description={description} sections={activityIndicatorSections} />;
 };

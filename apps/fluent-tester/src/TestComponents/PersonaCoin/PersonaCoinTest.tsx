@@ -19,5 +19,5 @@ const personaCoinSections: TestSection[] = [
 export const PersonaCoinTest: React.FunctionComponent = () => {
   const description = "PersonaCoins are used for rendering an individual's avatar. PersonaCoin renders the circular image component.";
 
-  return <Test name="PersonaCoin Test" description={description} sections={personaCoinSections} />;
+  return <Test name="PersonaCoin" description={description} sections={personaCoinSections} />;
 };

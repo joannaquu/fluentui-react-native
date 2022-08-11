@@ -285,5 +285,5 @@ const focusZoneSections: TestSection[] = [
 ];
 
 export const FocusZoneTest: React.FunctionComponent = () => {
-  return <Test name="FocusZone Test" description={'No description.'} sections={focusZoneSections} />;
+  return <Test name="FocusZone" description={'No description.'} sections={focusZoneSections} />;
 };

@@ -111,5 +111,5 @@ export const ThemeTest: React.FunctionComponent = () => {
   const description =
     'The entire color palette of the controls is themeable. We provide a set of sensible defaults, but you can override all colors individually.';
 
-  return <Test name="Theme Test" description={description} sections={themeSections} />;
+  return <Test name="Theme" description={description} sections={themeSections} />;
 };

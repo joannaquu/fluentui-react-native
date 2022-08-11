@@ -47,5 +47,5 @@ const drawerSections: TestSection[] = [
 export const DrawerTest: React.FunctionComponent = () => {
   const description = 'A Drawer component using the Fluent Design System.  Currently only implemented on Android.';
 
-  return <Test name="Drawer Test" description={description} sections={drawerSections} />;
+  return <Test name="Drawer" description={description} sections={drawerSections} />;
 };

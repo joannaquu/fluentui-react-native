@@ -133,5 +133,5 @@ const pressableSections: TestSection[] = [
 export const PressableTest: React.FunctionComponent = () => {
   const description = 'No description.';
 
-  return <Test name="Pressable Test" description={description} sections={pressableSections} />;
+  return <Test name="Pressable" description={description} sections={pressableSections} />;
 };

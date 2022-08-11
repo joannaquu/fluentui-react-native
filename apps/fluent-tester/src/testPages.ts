@@ -241,7 +241,7 @@ export const tests: TestDescription[] = [
     platforms: ['android', 'ios', 'macos', 'web', 'win32', 'windows'],
   },
   {
-    name: 'Tokens',
+    name: 'Token',
     component: TokenTest,
     testPage: HOMEPAGE_TOKEN_BUTTON,
     platforms: ['android', 'ios', 'macos', 'web', 'win32', 'windows'],

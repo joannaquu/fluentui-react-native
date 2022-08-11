@@ -3,6 +3,8 @@ import { StyleSheet, View } from 'react-native';
 import { Text, Separator } from '@fluentui/react-native';
 import { Stack } from '@fluentui-react-native/stack';
 import { stackStyle } from './Common/styles';
+import { Checkbox } from '@fluentui-react-native/experimental-checkbox';
+import { tests } from '../testPages';
 
 export type TestSection = {
   name: string;
@@ -44,7 +46,17 @@ const styles = StyleSheet.create({
   },
 });
 
+const PlatformCheckbox = Checkbox.customize({
+  disabled: {
+    checkboxBorderColor: 'black',
+    checkmarkColor: 'blue',
+    color: 'black',
+  },
+});
+
 export const Test = (props: TestProps): React.ReactElement<Record<string, never>> => {
+  const platforms = tests.find((test) => test.name === props.name).platforms;
+
   return (
     <View testID="ScrollViewAreaForComponents">
       <Text style={[styles.name]} variant="heroSemibold">
@@ -54,6 +66,13 @@ export const Test = (props: TestProps): React.ReactElement<Record<string, never>
       <Stack style={stackStyle}>
         <Text style={styles.description}>{props.description}</Text>
       </Stack>
+      <Text style={[styles.section]} variant="headerSemibold">
+        Platforms
+      </Text>
+      <Separator />
+      {platforms.map((platform) => {
+        return <PlatformCheckbox label={platform} defaultChecked={true} disabled={true} size="large" key={platform} />;
+      })}
       {props.sections.map((section, index) => {
         const TestComponent = section.component;
         return (

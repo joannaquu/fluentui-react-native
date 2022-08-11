@@ -274,5 +274,5 @@ const notificationSections: TestSection[] = [
 export const NotificationTest: React.FunctionComponent = () => {
   const description = 'Testing notification component';
 
-  return <Test name="Notification Test" description={description} sections={notificationSections} />;
+  return <Test name="Notification" description={description} sections={notificationSections} />;
 };
