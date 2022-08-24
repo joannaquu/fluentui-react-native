@@ -55,5 +55,9 @@ export const DrawerTest: React.FunctionComponent = () => {
 
   const description = 'A Drawer component using the Fluent Design System.  Currently only implemented on Android.';
 
-  return <Test name="Drawer Test" description={description} sections={drawerSections} status={status} />;
+  const links = {
+    Usage: 'https://github.com/microsoft/fluentui-react-native/blob/main/apps/fluent-tester/src/TestComponents/Drawer/DrawerTest.tsx',
+  };
+
+  return <Test name="Drawer Test" description={description} links={links} sections={drawerSections} status={status} />;
 };

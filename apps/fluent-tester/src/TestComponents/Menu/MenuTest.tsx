@@ -283,5 +283,10 @@ export const MenuTest: React.FunctionComponent = () => {
   const description =
     'A Menu is an component that displays a list of options on a temporary surface. They are invoked when users interact with a button, action, or other control.';
 
-  return <Test name="Menu Test" description={description} sections={menuSections} status={status}></Test>;
+  const links = {
+    SPEC: 'https://github.com/microsoft/fluentui-react-native/blob/main/packages/components/Menu/SPEC.md',
+    Usage: 'https://github.com/microsoft/fluentui-react-native/blob/main/apps/fluent-tester/src/TestComponents/Menu/MenuTest.tsx',
+  };
+
+  return <Test name="Menu Test" description={description} links={links} sections={menuSections} status={status} />;
 };

@@ -35,5 +35,10 @@ export const TextTest: React.FunctionComponent = () => {
 
   const description = 'Text is a component for displaying text. You can use Text to standardize text across your app.';
 
-  return <Test name="Text Test" description={description} sections={textSections} status={status} />;
+  const links = {
+    SPEC: 'https://github.com/microsoft/fluentui-react-native/blob/main/packages/components/text/SPEC.md',
+    Usage: 'https://github.com/microsoft/fluentui-react-native/blob/main/apps/fluent-tester/src/TestComponents/Text/StandardUsage.tsx',
+  };
+
+  return <Test name="Text Test" description={description} links={links} sections={textSections} status={status} />;
 };

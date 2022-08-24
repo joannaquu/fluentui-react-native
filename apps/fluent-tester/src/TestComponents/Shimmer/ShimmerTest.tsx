@@ -122,5 +122,9 @@ export const ShimmerTest: React.FunctionComponent = () => {
   const description =
     'Shimmer is a temporary animation placeholder for when a service call takes time to return data but the rest of the UI should continue rendering.';
 
-  return <Test name="Shimmer Test" description={description} sections={shimmerSections} status={status} />;
+  const links = {
+    Usage: 'https://github.com/microsoft/fluentui-react-native/blob/main/apps/fluent-tester/src/TestComponents/Shimmer/ShimmerTest.tsx',
+  };
+
+  return <Test name="Shimmer Test" description={description} links={links} sections={shimmerSections} status={status} />;
 };

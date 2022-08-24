@@ -441,5 +441,9 @@ export const CalloutTest: React.FunctionComponent = () => {
 
   const description = 'A callout is an anchored tip that can be used to teach people or guide them through the app without blocking them.';
 
-  return <Test name="Callout Test" description={description} sections={calloutSections} status={status}></Test>;
+  const links = {
+    Usage: 'https://github.com/microsoft/fluentui-react-native/blob/main/apps/fluent-tester/src/TestComponents/Callout/CalloutTest.tsx',
+  };
+
+  return <Test name="Callout Test" description={description} links={links} sections={calloutSections} status={status}></Test>;
 };

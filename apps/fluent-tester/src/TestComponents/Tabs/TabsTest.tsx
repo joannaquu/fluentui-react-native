@@ -295,5 +295,9 @@ export const TabsTest: React.FunctionComponent = () => {
 
   const description = 'With Tabs, users can navigate to another view.';
 
-  return <Test name="Tabs Test" description={description} sections={tabsSections} status={status} />;
+  const links = {
+    Usage: 'https://github.com/microsoft/fluentui-react-native/blob/main/apps/fluent-tester/src/TestComponents/Tabs/TabsTest.tsx',
+  };
+
+  return <Test name="Tabs Test" description={description} links={links} sections={tabsSections} status={status} />;
 };

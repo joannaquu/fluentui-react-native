@@ -141,5 +141,9 @@ export const PressableTest: React.FunctionComponent = () => {
 
   const description = 'No description.';
 
-  return <Test name="Pressable Test" description={description} sections={pressableSections} status={status} />;
+  const links = {
+    Usage: 'https://github.com/microsoft/fluentui-react-native/blob/main/apps/fluent-tester/src/TestComponents/Pressable/PressableTest.tsx',
+  };
+
+  return <Test name="Pressable Test" description={description} links={links} sections={pressableSections} status={status} />;
 };

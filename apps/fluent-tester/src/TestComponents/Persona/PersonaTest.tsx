@@ -28,5 +28,9 @@ export const PersonaTest: React.FunctionComponent = () => {
   const description =
     "Personas are used for rendering an individual's avatar and presence. Persona renders a PersonaCoin along with descriptive text components.";
 
-  return <Test name="Persona Test" description={description} sections={personaSections} status={status} />;
+  const links = {
+    Usage: 'https://github.com/microsoft/fluentui-react-native/blob/main/apps/fluent-tester/src/TestComponents/Persona/StandardUsage.tsx',
+  };
+
+  return <Test name="Persona Test" description={description} links={links} sections={personaSections} status={status} />;
 };

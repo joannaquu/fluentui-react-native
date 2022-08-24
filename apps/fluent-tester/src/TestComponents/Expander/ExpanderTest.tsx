@@ -125,5 +125,9 @@ export const ExpanderTest: React.FunctionComponent = () => {
   const description =
     'Expander is a content control that displays components in the header and content. The control has an expanded and collapsed size. Expander is a native control implemented with WinUI 2.6 Expander.';
 
-  return <Test name="Expander Test" description={description} sections={expanderSections} status={status}></Test>;
+  const links = {
+    Usage: 'https://github.com/microsoft/fluentui-react-native/blob/main/apps/fluent-tester/src/TestComponents/Expander/ExpanderTest.tsx',
+  };
+
+  return <Test name="Expander Test" description={description} links={links} sections={expanderSections} status={status}></Test>;
 };

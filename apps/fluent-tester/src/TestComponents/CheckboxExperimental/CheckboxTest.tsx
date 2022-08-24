@@ -180,5 +180,10 @@ export const ExperimentalCheckboxTest: React.FunctionComponent = () => {
   const description =
     'Checkboxes give people a way to select one or more items from a group, or switch between two mutually exclusive options (checked or unchecked, on or off).';
 
-  return <Test name="Experimental Checkbox Test" description={description} sections={checkboxSections} status={status} />;
+  const links = {
+    Usage:
+      'https://github.com/microsoft/fluentui-react-native/blob/main/apps/fluent-tester/src/TestComponents/CheckboxExperimental/CheckboxTest.tsx',
+  };
+
+  return <Test name="Experimental Checkbox Test" description={description} links={links} sections={checkboxSections} status={status} />;
 };

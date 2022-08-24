@@ -245,5 +245,12 @@ export const NativeDatePickerTest: React.FunctionComponent = () => {
 
   const description = 'A Native date picker component using the Fluent Design System.  Currently only implemented on iOS.';
 
-  return <Test name="Native Date Picker Test" description={description} sections={nativeDatePickerSections} status={status}></Test>;
+  const links = {
+    Usage:
+      'https://github.com/microsoft/fluentui-react-native/blob/main/apps/fluent-tester/src/TestComponents/NativeDatePicker/NativeDatePickerTest.tsx',
+  };
+
+  return (
+    <Test name="Native Date Picker Test" description={description} links={links} sections={nativeDatePickerSections} status={status}></Test>
+  );
 };

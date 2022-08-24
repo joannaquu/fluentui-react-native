@@ -117,5 +117,9 @@ export const IconTest: React.FunctionComponent = () => {
 
   const description = 'Icons are styled images that can be fonts, svgs, or bitmaps';
 
-  return <Test name="Icon Test" description={description} sections={iconSections} status={status}></Test>;
+  const links = {
+    Usage: 'https://github.com/microsoft/fluentui-react-native/blob/main/apps/fluent-tester/src/TestComponents/Icon/IconTest.tsx',
+  };
+
+  return <Test name="Icon Test" description={description} links={links} sections={iconSections} status={status}></Test>;
 };

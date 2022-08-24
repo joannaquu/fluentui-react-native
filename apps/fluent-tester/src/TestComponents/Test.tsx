@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { StyleSheet, View, Platform } from 'react-native';
-import { Text, Separator } from '@fluentui/react-native';
+import { Text, Separator, Link } from '@fluentui/react-native';
 import { Stack } from '@fluentui-react-native/stack';
 import { stackStyle } from './Common/styles';
 
@@ -22,6 +22,7 @@ export type PlatformStatus = {
 export interface TestProps {
   name: string;
   description: string;
+  links?: Record<string, string>;
   status: PlatformStatus;
   sections: TestSection[];
 }
@@ -67,6 +68,16 @@ export const Test = (props: TestProps): React.ReactElement<Record<string, never>
       <Stack style={stackStyle}>
         <Text style={styles.description}>{props.description}</Text>
       </Stack>
+      {props.links && (
+        <Stack style={stackStyle}>
+          <Text style={[styles.statusHeader]} variant="headerStandard">
+            Links
+          </Text>
+          {Object.entries(props.links).map(([key, value]) => {
+            return <Link url={value} content={key} key={key} />;
+          })}
+        </Stack>
+      )}
       {!isMobile && (
         <Stack style={stackStyle}>
           <View style={styles.statusView}>

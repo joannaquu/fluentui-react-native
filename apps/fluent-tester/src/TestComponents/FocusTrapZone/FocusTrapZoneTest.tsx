@@ -149,5 +149,10 @@ export const FocusTrapTest: React.FunctionComponent = () => {
   const description =
     'FocusTrapZone is used to trap the focus in any html element. Pressing tab will circle focus within the inner focusable elements of the FocusTrapZone.';
 
-  return <Test name="Focus Trap Zone Test" description={description} sections={focusTrapZoneSections} status={status}></Test>;
+  const links = {
+    Usage:
+      'https://github.com/microsoft/fluentui-react-native/blob/main/apps/fluent-tester/src/TestComponents/FocusTrapZone/FocusTrapZoneTest.tsx',
+  };
+
+  return <Test name="Focus Trap Zone Test" description={description} links={links} sections={focusTrapZoneSections} status={status}></Test>;
 };

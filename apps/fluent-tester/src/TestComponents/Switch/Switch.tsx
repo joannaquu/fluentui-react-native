@@ -125,5 +125,9 @@ export const SwitchTest: React.FunctionComponent = () => {
 
   const description = 'Switch is a control that has two mutually exclusive states.';
 
-  return <Test name="Switch Test" description={description} sections={toggleSections} status={status}></Test>;
+  const links = {
+    SPEC: 'https://github.com/microsoft/fluentui-react-native/blob/main/packages/experimental/Switch/SPEC.md',
+  };
+
+  return <Test name="Switch Test" description={description} links={links} sections={toggleSections} status={status} />;
 };

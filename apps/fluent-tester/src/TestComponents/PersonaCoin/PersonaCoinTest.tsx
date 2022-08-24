@@ -27,5 +27,10 @@ export const PersonaCoinTest: React.FunctionComponent = () => {
 
   const description = "PersonaCoins are used for rendering an individual's avatar. PersonaCoin renders the circular image component.";
 
-  return <Test name="PersonaCoin Test" description={description} sections={personaCoinSections} status={status} />;
+  const links = {
+    Usage:
+      'https://github.com/microsoft/fluentui-react-native/blob/main/apps/fluent-tester/src/TestComponents/PersonaCoin/StandardUsage.tsx',
+  };
+
+  return <Test name="PersonaCoin Test" description={description} links={links} sections={personaCoinSections} status={status} />;
 };

@@ -293,5 +293,9 @@ export const FocusZoneTest: React.FunctionComponent = () => {
     androidStatus: 'Backlog',
   };
 
-  return <Test name="FocusZone Test" description={'No description.'} sections={focusZoneSections} status={status} />;
+  const links = {
+    Usage: 'https://github.com/microsoft/fluentui-react-native/blob/main/apps/fluent-tester/src/TestComponents/FocusZone/FocusZoneTest.tsx',
+  };
+
+  return <Test name="FocusZone Test" description={'No description.'} links={links} sections={focusZoneSections} status={status} />;
 };

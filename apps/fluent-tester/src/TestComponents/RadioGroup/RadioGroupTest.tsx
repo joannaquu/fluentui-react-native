@@ -75,5 +75,10 @@ export const RadioGroupTest: React.FunctionComponent = () => {
 
   const description = 'No description.';
 
-  return <Test name="RadioGroup Test" description={description} sections={radioGroupSections} status={status} />;
+  const links = {
+    Usage:
+      'https://github.com/microsoft/fluentui-react-native/blob/main/apps/fluent-tester/src/TestComponents/RadioGroup/RadioGroupTest.tsx',
+  };
+
+  return <Test name="RadioGroup Test" description={description} links={links} sections={radioGroupSections} status={status} />;
 };

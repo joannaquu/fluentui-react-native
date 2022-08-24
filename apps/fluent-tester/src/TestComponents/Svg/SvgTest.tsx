@@ -201,5 +201,9 @@ export const SvgTest: React.FunctionComponent = () => {
 
   const description = 'No description.';
 
-  return <Test name="Svg Test" description={description} sections={svgSections} status={status} />;
+  const links = {
+    Usage: 'https://github.com/microsoft/fluentui-react-native/blob/main/apps/fluent-tester/src/TestComponents/Svg/SvgTest.tsx',
+  };
+
+  return <Test name="Svg Test" description={description} links={links} sections={svgSections} status={status} />;
 };
