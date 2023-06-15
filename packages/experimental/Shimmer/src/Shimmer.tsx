@@ -32,39 +32,59 @@ export const Shimmer = compose<ShimmerType>({
         containerHeight: props?.style?.['height'] ? props?.style['height'] : '100%',
         delay: props.delay ? props.delay : tokens['delay'],
         duration: props.duration ? props.duration : tokens['duration'],
+        easing: props.easing ? props.easing : undefined,
         shimmerColor: props.shimmerColor ? props.shimmerColor : tokens['shimmerColor'],
         shimmerColorOpacity: tokens['shimmerColorOpacity'],
         shimmerWaveColor: props.shimmerWaveColor ? props.shimmerWaveColor : tokens['shimmerWaveColor'],
         shimmerWaveColorOpacity: tokens['shimmerWaveColorOpacity'],
+        x1Start: props.x1Start ? props.x1Start : -2,
+        x1End: props.x1End ? props.x1End : 3,
+        x2Start: props.x2Start ? props.x2Start : -1,
+        x2End: props.x2End ? props.x2End : -1,
       }),
       [
         props.angle,
         props.delay,
         props.duration,
+        props.easing,
         props.shimmerColor,
         props.shimmerColorOpacity,
         props.shimmerWaveColor,
         props.shimmerWaveColorOpacity,
         props.style,
+        props.x1Start,
+        props.x1End,
+        props.x2Start,
+        props.x2End,
       ],
     );
 
-    /* The shimmer animation is implemented using a LinearGradient which travels from left to right.
-     * Different angles are handled by rotating this gradient.
-     * The startValue is used to control the start position of the gradient animation, it is set as -2 to make sure it is starts off the screen for any angle.
-     * Similarly the endValue is set to 3 to make sure the gradient animation exits the entire screen for any angle.
-     */
-    const startValue = useRef(new Animated.Value(-2)).current;
+    const x1 = useRef(new Animated.Value(memoizedShimmerData.x1Start)).current;
+    const x2 = useRef(new Animated.Value(memoizedShimmerData.x2Start)).current;
     const shimmerAnimation = useCallback(() => {
       Animated.loop(
-        Animated.timing(startValue, {
-          toValue: 3,
-          duration: memoizedShimmerData.duration,
-          delay: memoizedShimmerData.delay,
-          useNativeDriver: true,
-        }),
+        Animated.parallel([
+          Animated.timing(x1, {
+            toValue: memoizedShimmerData.x1End,
+            duration: memoizedShimmerData.duration,
+            useNativeDriver: true,
+            easing: memoizedShimmerData.easing,
+          }),
+          Animated.timing(x2, {
+            toValue: memoizedShimmerData.x2End,
+            duration: memoizedShimmerData.duration,
+            useNativeDriver: true,
+            easing: memoizedShimmerData.easing,
+          }),
+        ]),
       ).start();
-    }, [memoizedShimmerData.delay, memoizedShimmerData.duration]);
+    }, [memoizedShimmerData.delay,
+        memoizedShimmerData.duration,
+        memoizedShimmerData.easing,
+        memoizedShimmerData.x1Start,
+        memoizedShimmerData.x2Start,
+        memoizedShimmerData.x1End,
+        memoizedShimmerData.x2End]);
 
     useEffect(() => {
       shimmerAnimation();
@@ -105,7 +125,7 @@ export const Shimmer = compose<ShimmerType>({
       return (
         <Slots.root {...mergedProps}>
           <Defs>
-            <AnimatedLinearGradient id="gradient" x1={startValue} x2="-1" gradientTransform={`rotate(${memoizedShimmerData.angle})`}>
+            <AnimatedLinearGradient id="gradient" x1={x1} x2={x2} gradientTransform={`rotate(${memoizedShimmerData.angle})`}>
               <Stop offset="10%" stopColor={memoizedShimmerData.shimmerColor} stopOpacity={memoizedShimmerData.shimmerColorOpacity} />
               <Stop
                 offset="20%"

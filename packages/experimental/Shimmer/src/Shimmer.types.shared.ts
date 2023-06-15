@@ -153,11 +153,45 @@ export interface ShimmerTokens extends IBackgroundColorTokens {
   shimmerWaveWidth?: number | string;
 }
 
+
+/**
+ * The shimmer animation is implemented using a LinearGradient which travels from left to right.
+ * Different angles are handled by rotating this gradient.
+ * x1Start is used to control the start position of the gradient animation, it is set as -2 to make sure it is starts off the screen for any angle.
+ * Similarly x1End is set to 3 to make sure the gradient animation exits the entire screen for any angle.
+ */
+export interface ShimmerGradientProps {
+  /**
+   * @defaultValue -2
+   */
+  x1Start?: number;
+
+  /**
+   * @defaultValue 3
+   */
+  x1End?: number;
+
+  /**
+   * @defaultValue -1
+   */
+  x2Start?: number;
+
+  /**
+   * @defaultValue -1
+   */
+  x2End?: number;
+
+  /**
+   * @defaultValue undefined
+   */
+  easing?: ((value: number) => number) | undefined;
+}
+
 export interface ShimmerSlotProps {
   root: SvgProps;
 }
 
-export interface ShimmerProps extends ViewProps, ShimmerTokens {
+export interface ShimmerProps extends ViewProps, ShimmerTokens, ShimmerGradientProps {
   /**
    * Shimmer shapes that define the masking effect of the Shimmer control.
    */
