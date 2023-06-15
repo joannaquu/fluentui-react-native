@@ -1,0 +1,7 @@
+{
+  "type": "patch",
+  "comment": "add props for x1, x2, easing to Shimmer",
+  "packageName": "@fluentui-react-native/experimental-shimmer",
+  "email": "joannaquu@gmail.com",
+  "dependentChangeType": "patch"
+}
